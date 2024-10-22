@@ -40,7 +40,7 @@ const projectObj = {
     image: false,
     image2: false,
     image3: false,
-    video: "./assets/video/eruptionFatale.mp4"
+    video: "https://youtu.be/JqnhCMl64_w"
   },
   scopophobia: {
     titre: `Scopophobia - Unity`,
@@ -48,7 +48,7 @@ const projectObj = {
     image: false,
     image2: false,
     image3: false,
-    video: "./assets/video/scopophobia.mp4"
+    video: "https://youtu.be/HkR0GhxXz2g"
   },
   banqueSons: {
     titre: `Banque de Sons - Sonore`,
@@ -84,16 +84,16 @@ const projectObj = {
     image2: false,
     image3: false,
     sound: false,
-    video: "./assets/video/pixarBanana.mp4"
+    video: "https://youtu.be/Xaja_G7eDxo"
   },
-  pixarBanana: {
+  portalSides: {
     titre: `Portal Animation - 3D`,
     description: ``,
     image: false,
     image2: false,
     image3: false,
     sound: false,
-    video: "./assets/video/portalAnim.mp4"
+    video: "https://youtu.be/VQlTT4ovDFE"
   },
   futurDuPasseAudio: {
     titre: `Futur du Passé - Sonore`,
@@ -147,7 +147,7 @@ function loadProject(projectName) {
 }
 
 const allProjects = document.querySelectorAll(".project");
-const projectArr = ["forgeMedievale", "eruptionFatale", "scopophobia", "banqueSons", "ghostlyBusiness", "voyageUnique", "pixarBanana", "portalAnim", "futurDuPasseAudio"];
+const projectArr = ["forgeMedievale", "eruptionFatale", "scopophobia", "banqueSons", "ghostlyBusiness", "voyageUnique", "pixarBanana", "portalSides", "futurDuPasseAudio"];
 
 allProjects.forEach(element => {
   element.addEventListener("click", function () {
