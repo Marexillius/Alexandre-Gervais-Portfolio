@@ -205,7 +205,25 @@ p {
     margin-top: 1%;
 }
 
+/*---------------------------------------------------------- 
+# P R O J E C T S
+----------------------------------------------------------*/
+.project__project__container {
+    display: flex;
+    width: 100%;
+    padding: 3%;
+}
 
+.project__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.project__frame {
+    width: 75%;
+    aspect-ratio: 16 / 9;
+}
 /*
 .section-feature h1 {
     text-shadow: 3px 3px var(--bs-primary);
