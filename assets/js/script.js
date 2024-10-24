@@ -109,7 +109,7 @@ const projectObj = {
 let htmlPage = window.location.href;
 
 function loadProject(projectName) {
-  localStorage.setItem("projectClicked", projectName);
+  localStorage.setItem("projectSelected", projectName);
   if (htmlPage.includes("projects.html") === false) {
     window.location.href = "./pages/projects.html";
   }
@@ -168,6 +168,7 @@ allProjects.forEach(element => {
   element.addEventListener("click", function () {
     projectArr.forEach(project => {
       if (element.classList.contains(project)) {
+        localStorage.setItem("projectClicked", project);
         loadProject(project);
       };
     });
@@ -175,39 +176,40 @@ allProjects.forEach(element => {
 });
 
 let projectClicked = localStorage.getItem("projectClicked");
+let projectSelected = localStorage.getItem("projectSelected");
 console.log(htmlPage);
 
 /* CHECKING EACH PROJECT TO TURN BACK THE LOCALSTORAGE INTO ITEM*/
 switch(projectClicked) {
   case "forgeMedievale":
-    projectClicked = projectObj.forgeMedievale;
+    projectSelected = projectObj.forgeMedievale;
     break;
   case "eruptionFatale":
-    projectClicked = projectObj.eruptionFatale;
+    projectSelected = projectObj.eruptionFatale;
     break;
   case "scopophobia":
-    projectClicked = projectObj.scopophobia;
+    projectSelected = projectObj.scopophobia;
     break;
   case "banqueSons":
-    projectClicked = projectObj.banqueSons;
+    projectSelected = projectObj.banqueSons;
     break;
   case "ghostlyBusiness":
-    projectClicked = projectObj.ghostlyBusiness;
+    projectSelected = projectObj.ghostlyBusiness;
     break;
   case "voyageUnique":
-    projectClicked = projectObj.voyageUnique;
+    projectSelected = projectObj.voyageUnique;
     break;
   case "banqueSons":
-    projectClicked = projectObj.pixarBanana;
+    projectSelected = projectObj.pixarBanana;
     break;
   case "portalAnim":
-    projectClicked = projectObj.portalAnim;
+    projectSelected = projectObj.portalAnim;
     break;
   case "futurDuPasseAudio":
-    projectClicked = projectObj.futurDuPasseAudio;
+    projectSelected = projectObj.futurDuPasseAudio;
     break;
 }
 
 if (htmlPage.includes("projects.html")) {
-  loadProject(projectClicked);
+  loadProject(projectSelected);
 }
